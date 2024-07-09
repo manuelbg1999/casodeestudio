@@ -3,7 +3,9 @@ package steps;
 import driver.Driver;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.seleniumhq.jetty9.server.Authentication;
 import pages.RegisterPage;
 import pages.UserInformation;
@@ -53,6 +55,8 @@ public class RegisterSteps {
             Driver.driver.findElement(UserInformation.getInputCountry()).sendKeys(country);
             Thread.sleep(5000);
             Driver.driver.findElement(UserInformation.getInputCountry()).sendKeys(Keys.ENTER);
+
+
 
         }
         catch (InterruptedException e){
